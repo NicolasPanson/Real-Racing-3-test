@@ -1,0 +1,301 @@
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.items {
+    width: 130%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.item {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    overflow:hidden;
+    transition: all .3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.4);
+}
+
+.overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0,0,0,0.6);
+    width: 100vw;
+    height: 0vh;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: clamp(3rem, 8vw, 10rem);
+    overflow: hidden;
+}
+.overlay h1 {
+    transform: scale(0);
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.outer-headings {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.inner-headings {
+    border: 0px solid #ddd;
+    height: 50px;
+    line-height: 50px;
+    font-size: 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.inner-headings span {
+    position: relative;
+    color: white;
+    animation: animation 10s ease infinite;
+}
+
+@keyframes animation {
+    0%,
+    100% {
+        top: 0;
+    }
+    20% {
+        top: 0;
+    }
+    25% {
+        top: -50px;
+    }
+    45% {
+        top: -50px;
+    }
+    50% {
+        top: -100px;
+    }
+    70% {
+        top: -100px;
+    }
+    75% {
+        top: -150px;
+    }
+    95% {
+        top: -150px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #eeeeea;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('./RR3\ Hypercars.webp');
+}
+.card[for="c2"] {
+    background-image: url('./RR3\ Porsche\ v\ Nissan.jpg');
+}
+.card[for="c3"] {
+    background-image: url('./RR3\ Porsche\ 918\ concept.webp');
+}
+.card[for="c4"] {
+    background-image: url('./RR3\ Motorsport.webp');
+}
+.card[for="c5"] {
+    background-image: url('./RR3\ Mclaren.jpg');
+}
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+section > p, .rtitle {
+    font-size: 15rem;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.review-wrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 0;
+    gap: 2rem;
+    row-gap: 15rem;
+}
+.review {
+    width: 400px;
+    height: 300px;
+    box-shadow: 10px 0px 40px 0px rgba(0,0,0,0.2);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: white;
+}
+.review .rhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.review .rhead .title {
+    font-size: 2rem;
+    margin: 0;
+}
+.review .rhead .rating {
+    color: orange;
+}
+
+.rtitle {
+    top: 20%;
+}
+.s1 {
+    border-bottom: 1rem solid White;
+}
+
